@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100916">
+    <title>For You | 20/10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+
+    <main class="page">
+        <header class="header">
+            <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+            <h1>For Someone Special</h1>
+            <p class="subtitle">Một món quà nhỏ, dành riêng cho em</p>
+        </header>
+
+        <section class="heart-section">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="heart-stage" id="heartStage">
+                <div class="heart-glow"></div>
+
+                <div class="heart" id="heart" role="button"
+                     tabindex="0" aria-label="Chạm vào trái tim">
+
+                    <svg class="heart-svg" viewBox="0 0 200 190"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="heartColor"
+                                x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ffd0e1"/>
+                                <stop offset="24%" stop-color="#ff82b1"/>
+                                <stop offset="53%" stop-color="#f52e70"/>
+                                <stop offset="78%" stop-color="#c20d51"/>
+                                <stop offset="100%" stop-color="#740d3b"/>
+                            </linearGradient>
+
+                            <linearGradient id="heartSide"
+                                x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ff9fc3"/>
+                                <stop offset="100%" stop-color="#790b3c"/>
+                            </linearGradient>
+
+                            <linearGradient id="heartShine"
+                                x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ffffff"
+                                      stop-opacity=".95"/>
+                                <stop offset="55%" stop-color="#ffeaf2"
+                                      stop-opacity=".35"/>
+                                <stop offset="100%" stop-color="#ffffff"
+                                      stop-opacity="0"/>
+                            </linearGradient>
+
+                            <radialGradient id="heartLight"
+                                cx="25%" cy="20%" r="85%">
+                                <stop offset="0%" stop-color="#fff"
+                                      stop-opacity=".55"/>
+                                <stop offset="42%" stop-color="#ffb7d2"
+                                      stop-opacity=".1"/>
+                                <stop offset="100%" stop-color="#5d092e"
+                                      stop-opacity=".35"/>
+                            </radialGradient>
+
+                            <filter id="heartShadow" x="-35%" y="-35%"
+                                width="180%" height="190%">
+                                <feGaussianBlur in="SourceAlpha"
+                                    stdDeviation="5" result="blur"/>
+                                <feOffset dy="8" result="offset"/>
+                                <feColorMatrix in="offset" type="matrix"
+                                    values="0 0 0 0 0.25
+                                            0 0 0 0 0.01
+                                            0 0 0 0 0.10
+                                            0 0 0 .42 0"/>
+                                <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+
+                            <clipPath id="heartClip">
+                                <path d="M100 174
+                                    C85 160 17 108 17 59
+                                    C17 30 37 13 61 13
+                                    C80 13 94 24 100 41
+                                    C106 24 120 13 139 13
+                                    C163 13 183 30 183 59
+                                    C183 108 115 160 100 174Z"/>
+                            </clipPath>
+                        </defs>
+
+                        <!-- Bóng và thân trái tim -->
+                        <g filter="url(#heartShadow)">
+                            <path class="heart-shape"
+                                d="M100 174
+                                   C85 160 17 108 17 59
+                                   C17 30 37 13 61 13
+                                   C80 13 94 24 100 41
+                                   C106 24 120 13 139 13
+                                   C163 13 183 30 183 59
+                                   C183 108 115 160 100 174Z"
+                                fill="url(#heartColor)"/>
+
+                            <!-- Ánh sáng thể tích -->
+                            <path
+                                d="M100 174
+                                   C85 160 17 108 17 59
+                                   C17 30 37 13 61 13
+                                   C80 13 94 24 100 41
+                                   C106 24 120 13 139 13
+                                   C163 13 183 30 183 59
+                                   C183 108 115 160 100 174Z"
+                                fill="url(#heartLight)"/>
+
+                            <!-- Vệt sáng trên mặt -->
+                            <g clip-path="url(#heartClip)">
+                                <path
+                                    d="M35 45 C39 22 65 19 78 35
+                                       C87 46 82 58 74 66
+                                       C66 74 59 69 57 61
+                                       C54 54 64 47 70 51"
+                                    fill="none"
+                                    stroke="url(#heartShine)"
+                                    stroke-width="9"
+                                    stroke-linecap="round"
+                                    opacity=".85"/>
+
+                                <ellipse cx="51" cy="38" rx="17" ry="8"
+                                    transform="rotate(-32 51 38)"
+                                    fill="#fff" opacity=".4"
+                                    filter="url(#heartShadow)"/>
+
+                                <path
+                                    d="M45 83 C52 117 78 141 98 158"
+                                    fill="none" stroke="#ffb6d0"
+                                    stroke-width="2.5" opacity=".17"
+                                    stroke-linecap="round"/>
+
+                                <ellipse cx="143" cy="93" rx="13" ry="34"
+                                    transform="rotate(-25 143 93)"
+                                    fill="#67072f" opacity=".13"/>
+                            </g>
+                        </g>
+
+                        <!-- Điểm sáng nhỏ -->
+                        <circle cx="61" cy="34" r="3"
+                            fill="#fff" opacity=".95"/>
+                        <circle cx="61" cy="34" r="8"
+                            fill="#fff" opacity=".12"/>
+                    </svg>
+
+                    <span class="heart-spark spark-one">✦</span>
+                    <span class="heart-spark spark-two">✧</span>
+                </div>
+
+                <div class="heart-shadow"></div>
+            </div>
+
+            <p class="heart-caption">A HEART FULL OF LOVE</p>
+            <p class="tap-hint">Chạm vào trái tim để xem điều bất ngờ</p>
+        </section>
+
+        <section class="greeting">
+            <p class="date">20 · 10 · 2026</p>
+            <h2>Happy Nguoi Dep's Day</h2>
+
+            <p class="wish">
+                Gửi Người Tớ Yêu<br>
+    
+            </p>
+
+            <p class="small-note">
+                loveeeeeeeee
+            </p>
+
+            <button id="surpriseBtn">
+                <span>✧</span> Mở món quà nhỏ <span>✧</span>
+            </button>
+
+            <article class="letter" id="letter" aria-hidden="true">
+                <div class="letter-decoration">♡</div>
+                <p class="letter-label">Tình Yêu Của Tớ</p>
+                <h3>Gửi Nguyễn Trúc Thiên Kim</h3>
+
+                <p>
+                    Chúc em 20/10 vui vẻeee, hôm nay tớ
+                    không cạnh em được TT nhưng tớ sẽ đến
+                    cạnh em vào ngày sớm nhấttt,  đợi tớ nhóoo!
+                </p>
+
+                <p>
+                    Đừng giận với ghét tớ nhá TT 
+                    Mong là em sẽ thấy hạnh phúc
+                    khi ở cạnh tớ hihi
+                </p>
+
+                <p>
+                    Tớ yêu người yêu của tớ nhiều lắmmmm
+                    <3
+                </p>
+
+                <p class="signature">Iuuuuu xì trum ♡</p>
+            </article>
+        </section>
+
+        <footer>
+            <span>MADE WITH LOVE</span>
+            <span class="footer-heart">♥</span>
+            <span>20/10/2026</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
